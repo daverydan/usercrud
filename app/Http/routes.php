@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-    return App\User::all();
-});
-
-// Route::get('/', function () {
-    // return view('welcome');
-//     return view('users.index');
+// Route::get('/', function()
+// {
+//     return App\User::all();
 // });
 
-// Route::resource('users', 'UsersController');
+Route::get('/', function () {
+    return view('welcome');
+    return view('users.index');
+});
+
+Route::resource('users', 'UsersController');
